@@ -1,0 +1,21 @@
+img{
+  width: 400px;
+  height: 200px;
+}
+
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.805); 
+  z-index: 1; /*  sotto la modale */
+}
+
+dialog {
+  z-index: 3; /* modale sopra l'overlay */
+  position: relative; /* per la sovrapposizione */
+}
+

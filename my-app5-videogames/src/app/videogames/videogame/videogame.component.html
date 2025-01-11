@@ -1,0 +1,95 @@
+
+<div class="sfondo">
+  <div>
+    <h3>{{videogame.titolo}}</h3>
+    <img [src]="videogame.img" alt="">
+    <h4>{{videogame.prezzo}}€</h4>
+  
+    {{videogame.descrizione}}
+    <p>Genere: {{videogame.genere}}</p>
+    <p>Data di rilascio: {{videogame.dataRilascio | date : "dd MMMM yyyy"}}</p>
+  
+    <!-- <button class="btn btn-danger" (click)=" onDeleteParente()">Elimina</button> -->
+    @if(videogame.disponibilita){
+    <button class="btn btn-success" (click)="confermaAcquisto()" >Acquista</button>
+    }@else { @if(isPrenotato(videogame.id)) {
+      <!-- Pulsante prenotato, visibile se il gioco è già prenotato -->
+    <button type="button" class="btn btn-primary" (click)="confermaPrenotazione()">Prenotato</button>
+    }@else {
+       <!-- Pulsante prenota, visibile se il gioco non è disponibile e non è già prenotato -->
+    <button class="btn btn-danger" (click)="onStartAddPrenotazione()">Prenota</button>
+    }}
+  
+  </div>
+  
+  @if(isAddingPrenotazione) {
+  <div class="overlay">
+  
+    <dialog open>
+      <h2 style="color: darkblue;">Prenotazione '{{videogame.titolo}}'</h2>
+      
+    <form #form="ngForm" (ngSubmit)="onSubmitForm(form)">
+      <div class="mb-3">
+  
+        <label for="nome" class="form-label">Nome</label>
+        <input type="text" class="form-control" id="nome" name="nome" [(ngModel)]="enteredNome" required minlength="2" #nome="ngModel" />
+        <div>
+          @if (nome.touched && nome.invalid) {
+            <p class="text-danger"> Nome non valido</p>
+          }
+        </div>
+  
+        <label for="cognome" class="form-label">Cognome</label>
+        <input type="text" class="form-control" id="cognome" name="cognome" [(ngModel)]="enteredCognome" required minlength="2" #cognome="ngModel"  />
+        <div>
+          @if (cognome.touched && cognome.invalid) {
+            <p class="text-danger"> Cognome non valido</p>
+          }
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control" id="email" name="email" 
+        [(ngModel)]="enteredEmail" required  pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" #email="ngModel"/>
+        <div>
+          @if (email.touched && email.invalid) {
+            <p class="text-danger"> Email non valida</p>
+          }
+        </div>
+        
+  
+      </div>
+      <div class="mb-3">
+        <label for="telefono" class="form-label">Telefono</label>
+        <input type="tel" class="form-control" id="telefono" name="telefono" [(ngModel)]="enteredTelefono" required #telefono="ngModel"/>
+        <div>
+          @if (telefono.touched && telefono.invalid) {
+            <p class="text-danger"> Telefono non valido</p>
+          }
+        </div>
+  
+      </div>
+      <div class="mb-3">
+        <label for="indirizzo" class="form-label">Indirizzo di spedizione:</label>
+        <textarea type="text" class="form-control" id="indirizzo" name="indirizzo"
+          [(ngModel)]="enteredIndirizzo" required #indirizzo="ngModel"></textarea>
+          <div>
+            @if (indirizzo.touched && indirizzo.invalid) {
+              <p class="text-danger"> Indirizzo non valido</p>
+            }
+          </div>
+      </div>
+  
+      <button type="submit" class="btn btn-success rounded-pill" (click)="onSubmit(videogame.id)" [disabled]="form.invalid">
+        Prenota
+      </button>
+      <button type="button" class="btn btn-danger rounded-pill" (click)="onClose()">
+        Chiudi
+      </button>
+  
+    </form>
+  </dialog>
+  
+  </div>
+  }
+</div>
