@@ -1,0 +1,115 @@
+{
+  "corsi": [
+    {
+      "id": "a1",
+      "nome": "Yoga per principianti",
+      "descrizione": "Un corso di yoga ideale per chi inizia e vuole migliorare flessibilità e rilassamento.",
+      "istruttore": "Alice Rossi",
+      "durata": 60,
+      "capacitaMax": 15,
+      "numIscritti": 10,
+      "postiDisp": true,
+      "image": "http://localhost:3000/images/yoga.avif"
+    },
+    {
+      "id": "a2",
+      "nome": "CrossFit Base",
+      "descrizione": "Allenamenti intensi per migliorare forza e resistenza.",
+      "istruttore": "Marco Bianchi",
+      "durata": 45,
+      "capacitaMax": 20,
+      "numIscritti": 18,
+      "postiDisp": true,
+      "image": "http://localhost:3000/images/crossfit.avif"
+    },
+    {
+      "id": "a3",
+      "nome": "Pilates Avanzato",
+      "descrizione": "Perfeziona postura e tonicita' muscolare con esercizi avanzati.",
+      "istruttore": "Chiara Verdi",
+      "durata": 50,
+      "capacitaMax": 12,
+      "numIscritti": 12,
+      "postiDisp": false,
+      "image": "http://localhost:3000/images/pilates.avif"
+    },
+    {
+      "id": "a4",
+      "nome": "Zumba Fitness",
+      "descrizione": "Divertiti ballando e brucia calorie con Zumba.",
+      "istruttore": "Laura Neri",
+      "durata": 55,
+      "capacitaMax": 25,
+      "numIscritti": 22,
+      "postiDisp": true,
+      "image": "http://localhost:3000/images/zumba.avif"
+    },
+    {
+      "id": "a5",
+      "nome": "Allenamento Funzionale",
+      "descrizione": "Esercizi per migliorare il movimento quotidiano e rafforzare il corpo.",
+      "istruttore": "Luca Fontana",
+      "durata": 60,
+      "capacitaMax": 20,
+      "numIscritti": 15,
+      "postiDisp": true,
+      "image": "http://localhost:3000/images/funzionale.avif"
+    },
+    {
+      "id": "a6",
+      "nome": "Spinning",
+      "descrizione": "Allenamento cardio su bici stazionaria con musica.",
+      "istruttore": "Elena Conti",
+      "durata": 45,
+      "capacitaMax": 18,
+      "numIscritti": 18,
+      "postiDisp": false,
+      "image": "http://localhost:3000/images/spinning.avif"
+    },
+    {
+      "id": "a7",
+      "nome": "Boxe Amatoriale",
+      "descrizione": "Impara i fondamentali della boxe in modo sicuro e divertente.",
+      "istruttore": "Fabio Di Mauro",
+      "durata": 50,
+      "capacitaMax": 16,
+      "numIscritti": 12,
+      "postiDisp": true,
+      "image": "http://localhost:3000/images/boxe.avif"
+    },
+    {
+      "id": "a8",
+      "nome": "Stretching e Mobilità",
+      "descrizione": "Migliora la tua flessibilità e prevenzione degli infortuni.",
+      "istruttore": "Giulia Galli",
+      "durata": 40,
+      "capacitaMax": 20,
+      "numIscritti": 10,
+      "postiDisp": true,
+      "image": "http://localhost:3000/images/stretching.avif"
+    },
+    {
+      "id": "a9",
+      "nome": "HIIT (High Intensity Interval Training)",
+      "descrizione": "Allenamento intenso con esercizi ad alta intensità alternati a pause.",
+      "istruttore": "Riccardo Morelli",
+      "durata": 30,
+      "capacitaMax": 15,
+      "numIscritti": 14,
+      "postiDisp": true,
+      "image": "http://localhost:3000/images/hiit.avif"
+    },
+    {
+      "id": "a10",
+      "nome": "Kettlebell Training",
+      "descrizione": "Allenati con kettlebell per forza e stabilità muscolare.",
+      "istruttore": "Sara Romano",
+      "durata": 45,
+      "capacitaMax": 15,
+      "numIscritti": 12,
+      "postiDisp": true,
+      "image": "http://localhost:3000/images/kettlebell.avif"
+    }
+  ],
+  "prenotazioni": []
+}
